@@ -1,0 +1,119 @@
+$slider-name: home__typingSlider;
+$slides: 3;
+$typing-duration: 3s;
+$tab-letters: 10 8 5; //number of characters in each paragraph
+$slider-font-size: 3rem;
+$background: #f5eedc;
+
+.home {
+  max-width: 1373px;
+  margin: 0 auto;
+  padding: 20px 80px;
+  background-color: #f5eedc;
+  border-radius: 15px;
+  height: 100vh;
+}
+
+.home__profile {
+  display: flex;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.home__profile--img {
+  background: center 5% url(../../img/profile.jpg) no-repeat;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.home__profile--img-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  opacity: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+
+.home__profile--img-description:hover {
+  opacity: 0.7;
+}
+
+// text slider
+
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 100%;
+  }
+  90%,
+  to {
+    width: 0;
+  }
+}
+
+@keyframes slide {
+  #{100% / $slides} {
+    font-size: $slider-font-size;
+    letter-spacing: 3px;
+  }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+}
+
+.#{$slider-name} {
+  font-family: Consolas, monospace;
+  font-weight: bold;
+  white-space: nowrap;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.#{$slider-name} p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  animation: slide $typing-duration * $slides step-start infinite;
+}
+
+.#{$slider-name} p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid black;
+  background-color: $background;
+  animation: typing $typing-duration infinite, cursor 1s infinite;
+}
+
+@each $letters in $tab-letters {
+  $i: index($tab-letters, $letters);
+  .#{$slider-name} p:nth-child(#{$i}) {
+    animation-delay: $typing-duration * ($i - 1);
+    &::after {
+      animation-delay: $typing-duration * ($i - 1);
+      animation-timing-function: steps(#{$letters}), step-end;
+    }
+  }
+}
