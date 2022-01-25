@@ -6,6 +6,7 @@ import "./App.scss";
 import StarBg from "./components/starBg/starBg";
 import Home from "./components/home/Home";
 import Skills from "./components/skills/skills";
+import Projects from "./components/projects/projects";
 
 AOS.init();
 
@@ -19,7 +20,7 @@ const App = (props) => {
         {/* skills */}
         <Skills />
         {/* project */}
-        <div>project</div>
+        <Projects />
       </div>
     </>
   );
