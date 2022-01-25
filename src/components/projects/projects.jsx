@@ -13,7 +13,7 @@ const Projects = (props) => {
       <br/>
       두번째 줄
       `,
-      gifDirection: "",
+      imgSrc: "https://user-images.githubusercontent.com/56648090/143528989-d87687fb-a86d-4dea-bd57-36b4560f651d.png",
     },
     {
       key: 2,
