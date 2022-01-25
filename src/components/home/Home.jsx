@@ -1,5 +1,4 @@
 import React from "react";
-import profile from "../../img/profile.jpg";
 import "./Home.scss";
 
 const Home = (props) => (
