@@ -8,16 +8,17 @@ $background: #f5eedc;
 .home {
   max-width: 1373px;
   margin: 0 auto;
-  padding: 20px 80px;
+  padding: 50px 80px;
+  margin-bottom: 50px;
   background-color: #f5eedc;
   border-radius: 15px;
-  height: 100vh;
 }
 
 .home__profile {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: left;
+  width: 80%;
+  margin: 0 auto;
   padding: 30px 0;
 }
 
@@ -49,7 +50,7 @@ $background: #f5eedc;
 
 .home__profile--contact {
   display: flex;
-  width: 40%;
+  width: 100%;
   margin-left: 3rem;
   flex-direction: column;
   justify-content: center;
@@ -76,6 +77,13 @@ $background: #f5eedc;
 
 .home__profile--contact li:hover {
   background-color: #ff4c29;
+}
+
+.home__introduce {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 3rem;
 }
 
 // text slider
