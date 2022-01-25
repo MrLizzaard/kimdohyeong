@@ -1,9 +1,9 @@
 $starBg-color: #423f3e;
 
 @function multiple-box-shadow($n) {
-  $value: "#{random(2000)}px #{random(20000)}px #FFF";
+  $value: "#{random(3000)}px #{random(20000)}px #FFF";
   @for $I from 2 to $n {
-    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+    $value: "#{$value} , #{random(3000)}px #{random(2000)}px #FFF";
   }
 
   @return unquote($value);
@@ -84,20 +84,21 @@ $shadows-big: multiple-box-shadow(100);
   top: 50%;
   left: 0;
   right: 0;
+  transform: translateY(-50%);
 
   color: #fff;
   text-align: center;
-  font-weight: 300;
-  font-size: 50px;
+  font-weight: 800;
+  font-size: 100px;
   letter-spacing: 10px;
 
   margin-top: -60px;
   padding-left: 10px;
 
-  span {
-    background: linear-gradient(white, #38495a);
+  div {
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(255, 76, 41, 0.5);
+    transition: all 0.5s ease;
   }
 }
 
