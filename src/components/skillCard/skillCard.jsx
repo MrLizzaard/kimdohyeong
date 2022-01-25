@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useRef } from "react/cjs/react.development";
 import "./skillCard.scss";
 
-const SkillCard = ({ name, text }) => {
+const SkillCard = ({ skill }) => {
+  const boxRef = useRef();
+  useEffect(() => {
+    boxRef.current.innerHTML = skill.text;
+  });
   return (
     <div data-aos="flip-down" className="skills__card">
-      <div className="skills__card--title">{name}</div>
-      <div className="skills__card--text">{text}</div>
+      <div className="skills__card--title">{skill.name}</div>
+      <div className="skills__card--text" ref={boxRef}></div>
     </div>
   );
 };

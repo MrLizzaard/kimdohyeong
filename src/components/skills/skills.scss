@@ -3,10 +3,65 @@
   height: 100vh;
 }
 
+.skills__titleContainer {
+  width: 90%;
+  margin: 0 auto 8rem;
+}
+
+.skills__title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 5px 5px 0px rgba(255, 76, 41, 0.83);
+  color: rgba(255, 255, 255);
+}
+
 .skills__cardContainer {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+.skills__lists {
+  display: flex;
+  font-size: 15px;
+  color: white;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.skills__lists li {
+  border: 3px solid white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+// skill range
+
+.skills__range {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 90%;
+  height: 10px;
+  background-color: gray;
+}
+
+.skills__range-value {
+  position: absolute;
+  width: 30%;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background-color: #ff4c29;
+  transition: all 0.3s ease;
+}
+
+.skills__range-text {
+  position: absolute;
+  transform: translateY(100%);
+  color: white;
+  font-size: 18px;
 }

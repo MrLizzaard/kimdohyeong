@@ -1,18 +1,25 @@
 .skills__card {
-  width: 45%;
+  width: 47%;
   border: 5px solid #ff4c29;
   border-radius: 20px;
   padding: 50px 2rem 25px;
   margin-bottom: 60px;
+  color: white;
 }
 
 .skills__card--title {
   background-color: #423f3e;
+  color: #ff4c29;
   padding: 10px;
   position: absolute;
-  border-bottom: 1px solid black;
+  border: 3px solid white;
   top: 0;
   left: 0;
-  transform: rotate(-30deg) translate(-30%, -100%);
+  transform: rotate(-30deg) translate(-20%, -80%);
   font-size: 30px;
+  font-weight: 600;
+}
+
+.skills__card--text {
+  line-height: 2rem;
 }
