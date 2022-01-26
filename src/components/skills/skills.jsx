@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useRef } from "react/cjs/react.development";
+import React, { useEffect, useRef } from "react";
 import SkillCard from "../skillCard/skillCard";
 import "./skills.scss";
 
