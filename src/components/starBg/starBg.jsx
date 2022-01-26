@@ -4,6 +4,7 @@ import "./starBg.scss";
 const StarBg = ({ gsap }) => {
   const [scrollY, setScrollY] = useState(0);
   const [pageHeight, setPageHeight] = useState(window.innerHeight);
+  setPageHeight(0);
   const boxRefFirst = useRef();
   const boxRefSecond = useRef();
 
