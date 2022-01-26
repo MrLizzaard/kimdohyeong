@@ -5,7 +5,7 @@ import "./projects.scss";
 const Projects = (props) => {
   const projectsList = [
     {
-      key: 1,
+      id: 1,
       title: "자유게시판",
       stack: ["MongoDB", "Express", "Bootstrap", "ejs"],
       description: `
@@ -16,9 +16,10 @@ const Projects = (props) => {
       mongoDB와 passport라는 middleware를 활용해 아이디, 비밀번호를 만들고 로그인 할 수 있는 시스템을 만듦.
       `,
       imgSrc: "https://user-images.githubusercontent.com/56648090/143528989-d87687fb-a86d-4dea-bd57-36b4560f651d.png",
+      src: "https://github.com/MrLizzaard/generalForum",
     },
     {
-      key: 2,
+      id: 2,
       title: "RealTime DataBase를 활용한 사이트",
       stack: ["React", "Firebase"],
       description: `
@@ -29,9 +30,10 @@ const Projects = (props) => {
       AuthService를 이용하여 구글과 Github 로그인 기능 구현
       `,
       imgSrc: "https://mrlizzaard.github.io/portfolio/img/project/cardMaker.gif",
+      src: "https://github.com/MrLizzaard/card-maker",
     },
     {
-      key: 3,
+      id: 3,
       title: "Youtube API를 활용하여 만든 사이트",
       stack: ["React", "Postman"],
       description: `
@@ -42,6 +44,7 @@ const Projects = (props) => {
       fetch후 React를 사용해서 UI 생성
       `,
       imgSrc: "	https://mrlizzaard.github.io/portfolio/img/project/youtubeReact.gif",
+      src: "https://github.com/MrLizzaard/youtubeReact",
     },
   ];
   return (
@@ -51,12 +54,12 @@ const Projects = (props) => {
         <div className="projects__cards-container">
           {projectsList.map((project) => {
             let aos;
-            if (project.key % 2 === 0) {
+            if (project.id % 2 === 0) {
               aos = "flip-left";
-            } else if (project.key % 2 === 1) {
+            } else if (project.id % 2 === 1) {
               aos = "flip-right";
             }
-            return <ProjectCard project={project} key={project.key} aos={aos} />;
+            return <ProjectCard project={project} key={project.id} aos={aos} />;
           })}
         </div>
       </div>

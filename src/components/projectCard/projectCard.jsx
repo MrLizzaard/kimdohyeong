@@ -15,11 +15,14 @@ const ProjectCard = ({ project, aos }) => {
         <img src={project.imgSrc} alt="project" />
         <ul className="projects__card-stacks">
           {project.stack.map((stack) => {
-            return <li>{stack}</li>;
+            return <li key={stack}>{stack}</li>;
           })}
         </ul>
         <div className="project__card-title">{project.title}</div>
         <div className="project__card-description" ref={boxRef}></div>
+        <a className="project__icon" href={project.src} target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i>
+        </a>
       </div>
     </div>
   );
