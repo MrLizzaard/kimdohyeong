@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   background-color: black;
-  height: 100vh;
   padding: 8rem 8rem 20rem;
 }
 
@@ -26,4 +25,19 @@
 
 .projects__cards-container {
   width: 100%;
+}
+
+.projects__copyright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  color: grey;
+  font-size: 14px;
+  .projects__copyright-name {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+  }
 }

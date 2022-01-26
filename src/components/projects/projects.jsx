@@ -9,21 +9,39 @@ const Projects = (props) => {
       title: "자유게시판",
       stack: ["MongoDB", "Express", "Bootstrap", "ejs"],
       description: `
-      첫번째 줄
+      Express와 MongoDB를 사용해서 만든 게시판.
       <br/>
-      두번째 줄
+      각 페이지는 ejs로 만듦. bootstrap을 사용해 완성.
+      <br/>
+      mongoDB와 passport라는 middleware를 활용해 아이디, 비밀번호를 만들고 로그인 할 수 있는 시스템을 만듦.
       `,
       imgSrc: "https://user-images.githubusercontent.com/56648090/143528989-d87687fb-a86d-4dea-bd57-36b4560f651d.png",
     },
     {
       key: 2,
-      title: "RealTime DataBase",
-      stack: ["MongoDB", "Express", "Bootstrap", "ejs"],
+      title: "RealTime DataBase를 활용한 사이트",
+      stack: ["React", "Firebase"],
       description: `
-      첫번째 줄
+      Firebase와 React를 이용한 사이트.
       <br/>
-      두번째 줄
+      RealTime DataBase를 활용하여 실시간으로 저장됨.
+      <br/>
+      AuthService를 이용하여 구글과 Github 로그인 기능 구현
       `,
+      imgSrc: "https://mrlizzaard.github.io/portfolio/img/project/cardMaker.gif",
+    },
+    {
+      key: 3,
+      title: "Youtube API를 활용하여 만든 사이트",
+      stack: ["React", "Postman"],
+      description: `
+      Google Developer에서 제공하는 youtube API를 활용하여 만든 사이트.
+      <br/>
+      API사용을 더 쉽게 만들어주는 axios와 postman을 사용함.
+      <br/>
+      fetch후 React를 사용해서 UI 생성
+      `,
+      imgSrc: "	https://mrlizzaard.github.io/portfolio/img/project/youtubeReact.gif",
     },
   ];
   return (
@@ -41,6 +59,9 @@ const Projects = (props) => {
             return <ProjectCard project={project} key={project.key} aos={aos} />;
           })}
         </div>
+      </div>
+      <div className="projects__copyright">
+        Developed By <span className="projects__copyright-name">KimDoHyeong</span>
       </div>
     </div>
   );
