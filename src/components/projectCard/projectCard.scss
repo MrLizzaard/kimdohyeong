@@ -27,19 +27,19 @@
 
 .projects__card:nth-child(odd) {
   .projects__card-form {
-    border: 2px solid red;
+    border: 2px solid #fe83c6;
     margin-right: auto;
 
-    color: red;
+    color: #fe83c6;
   }
 }
 
 .projects__card:nth-child(even) {
   .projects__card-form {
-    border: 2px solid green;
+    border: 2px solid #9ad0ec;
     margin-left: auto;
 
-    color: green;
+    color: #9ad0ec;
   }
 }
 
